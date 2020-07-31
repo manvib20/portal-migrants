@@ -17,14 +17,17 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 app.post('/post-feedback', function (req, res) {
     dbConn.then(function(db) {
         delete req.body._id; // for safety reasons
-        db.collection('feedbacks').insertOne(req.body);
+        const collection=db.collection('feedbacks');
+        collection.insertOne(req.body);
     });    
     res.send('Data received:\n' + JSON.stringify(req.body));
 });
 
 app.get('/view-feedbacks',  function(req, res) {
     dbConn.then(function(db) {
-        db.collection('feedbacks').find({}).toArray().then(function(feedbacks) {
+        
+        const collection=db.collection('feedbacks');
+        collection.find({}).toArray().then(function(feedbacks) {
             res.status(200).json(feedbacks);
         });
     });
