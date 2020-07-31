@@ -7,13 +7,13 @@
     <body>
         <h1>Migrants Portal | <%= title%></h1>
         <div id="migrants-form">
-            <form action="" method="POST">
+            <form action="/post-feedback" method="POST">
                 <fieldset>
                     <legend>About me</legend>
                     <p>My name is</p>
                     <input type="text" name="fname" placeholder="Enter your name.." required>
                     <p>I am a</p>
-                    <select id="profession" required>
+                    <select name="prof" id="profession" required>
                         <option value="accountant">Accountant</option>
                         <option value="actor">Actor</option>
                         <option value="actress">Actress</option>
@@ -34,9 +34,9 @@
                     <p>My phone number is</p>
                     <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="Enter phone number.." required>
                     <p>My skills are</p>
-                    <textarea rows="3" cols="30" placeholder="Enter your skills.." required></textarea>
+                    <textarea name="skills" rows="3" cols="30" placeholder="Enter your skills.." required></textarea>
                     <p>COVID (Corona) Effects on me</p>
-                    <select id="effect" required>
+                    <select name="effects" id="effect" required>
                         <option value="no-effect">No effect</option>
                         <option value="migrated">Migrated to village</option>
                         <option value="lost-job">Lost job</option>
@@ -45,7 +45,7 @@
                     <p>My current location</p>
                     <input type="text" name="location" placeholder="Enter your location.." required>
                     <p>My preferred work location</p>
-                    <select id="work-location" required>
+                    <select name="wloc" id="work-location" required>
                         <option value="delhi">New Delhi</option>
                         <option value="mumbai">Mumbai</option>
                         <option value="uttar-pradesh">Uttar Pradesh</option>
@@ -55,16 +55,17 @@
                 <fieldset>
                     <legend>Education Details</legend>
                     <p>My work experience</p>
-                    <textarea rows="3" cols="30" placeholder="Enter your work experience.." required></textarea>
+                    <textarea name="w_exp" rows="3" cols="30" placeholder="Enter your work experience.." required></textarea>
                     <p>My interest areas</p>
-                    <textarea rows="3" cols="30" placeholder="Enter your interest areas.." required></textarea>
+                    <textarea name="interests" rows="3" cols="30" placeholder="Enter your interest areas.." required></textarea>
                     <p>My education</p>
-                    <textarea rows="3" cols="30" placeholder="Enter your education details.." required></textarea>
+                    <textarea name="edu" rows="3" cols="30" placeholder="Enter your education details.." required></textarea>
                     <p>My Certifications/Recommendations</p>
-                    <textarea rows="3" cols="30" placeholder="Enter your Certifications.." required></textarea>
+                    <textarea name="Certifications" rows="3" cols="30" placeholder="Enter your Certifications.." required></textarea>
                 </fieldset>
                 <input type="file" name="avatar" class="inputfile" placeholder="Profile Picture"><br><br><br>
                 <input type="submit" value="Submit">
+                <a href="/view-feedbacks">View Records</a>
             </form>
         </div>
     </body>
