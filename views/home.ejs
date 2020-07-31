@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>
+            <%= title%>
+        </title>
+    </head>
+    <body>
+        <h1>Migrants Portal | <%= title%></h1>
+        <div id="migrants-form">
+            <form action="" method="POST">
+                <fieldset>
+                    <legend>About me</legend>
+                    <p>My name is</p>
+                    <input type="text" name="fname" placeholder="Enter your name.." required>
+                    <p>I am a</p>
+                    <select id="profession" required>
+                        <option value="accountant">Accountant</option>
+                        <option value="actor">Actor</option>
+                        <option value="actress">Actress</option>
+                        <option value="air-traffic-controller">Air traffic controller</option>
+                        <option value="architect">Architect</option>
+                        <option value="artist">Artist</option>
+                        <option value="attorney">Attrney</option>
+                        <option value="banker">Banker</option>
+                        <option value="bartender">Bartender</option>
+                        <option value="barber">Barber</option>
+                        <option value="bookkeeper">Bookkeeper</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Location Details</legend>
+                    <p>My email id is</p>
+                    <input type="email" name="email" placeholder="Enter your email.." required>
+                    <p>My phone number is</p>
+                    <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="Enter phone number.." required>
+                    <p>My skills are</p>
+                    <textarea rows="3" cols="30" placeholder="Enter your skills.." required></textarea>
+                    <p>COVID (Corona) Effects on me</p>
+                    <select id="effect" required>
+                        <option value="no-effect">No effect</option>
+                        <option value="migrated">Migrated to village</option>
+                        <option value="lost-job">Lost job</option>
+                        <option value="lost-opportunity"> Lost opportunity</option>
+                    </select>
+                    <p>My current location</p>
+                    <input type="text" name="location" placeholder="Enter your location.." required>
+                    <p>My preferred work location</p>
+                    <select id="work-location" required>
+                        <option value="delhi">New Delhi</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="uttar-pradesh">Uttar Pradesh</option>
+                        <option value="madhya-pradesh">Madhya Pradesh</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Education Details</legend>
+                    <p>My work experience</p>
+                    <textarea rows="3" cols="30" placeholder="Enter your work experience.." required></textarea>
+                    <p>My interest areas</p>
+                    <textarea rows="3" cols="30" placeholder="Enter your interest areas.." required></textarea>
+                    <p>My education</p>
+                    <textarea rows="3" cols="30" placeholder="Enter your education details.." required></textarea>
+                    <p>My Certifications/Recommendations</p>
+                    <textarea rows="3" cols="30" placeholder="Enter your Certifications.." required></textarea>
+                </fieldset>
+                <input type="file" name="avatar" class="inputfile" placeholder="Profile Picture"><br><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
